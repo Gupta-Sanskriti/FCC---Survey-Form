@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <div id="heading">
+            <h1 id="title">Survey form - freecodecamp</h1>
+            <p id="description">This is the dummy form created using pure html and css
+            </p>
+        </div>
+        <form id="survey-form">
+            <!-- name -->
+            <div class="form-group">
+                <label for="name" id="name-label">
+                    Name
+                </label>
+                <input id="name" type="text" name="name"  placeholder="enter your name.." required>
+            </div>
+            <!-- email -->
+            <div class="form-group">
+                <label for="email" id="email-label">
+                    Email
+                </label>
+                <input type="email" id="email"  name="email" placeholder="enter your email.." required>
+            </div>
+            <!-- number -->
+            <div class="form-group">
+                <label for="number" id="number-label">
+                    Age
+                </label>
+                <input type="number" id="number" name="number" placeholder="enter your age.." min="2" max="100" required>
+            </div>
+            
+            <!-- dropdown menu -->
+            <div class="form-group">
+                <label for="gender">Gender</label>
+
+                <select name="gender" id="dropdown" >
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="transgender">Transgender</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+                
+            <!-- radio button -->
+            <div class="radio-btn">
+                <p>Course Stream</p>
+                <div class="item">
+                    <input type="radio" id="science" name="stream" value="scienc">
+                    <label for="science">Science</label>
+                </div>
+                <div class="item">
+                    <input type="radio" id="commerce" name="stream" value="commerce">
+                    <label for="commerce">Commerce</label>
+                </div>
+                <div class="item">
+                    <input type="radio" id="humanities" name="stream" value="humanities">
+                    <label for="humanities">Humanities</label>
+                </div>
+            </div>
+            
+            
+            <!-- checkboxes -->
+            <div class="checkboxes">
+                <p>Subjects you're interested in.</p>
+                <input type="checkbox" id="computer-science" name="computer-science" value="computer-science">
+                <label for="computer-science"> Computer Science</label>
+                <br>
+                <input type="checkbox" id="maths" name="maths" value="maths">
+                <label for="maths">Maths</label>
+                <br>
+                <input type="checkbox" id="accounts" name="accounts" value="accounts">
+                <label for="accounts">Accounts</label>
+                <br>
+                <input type="checkbox" id="economics" name="economics" value="economics">
+                <label for="economics">Economics</label>
+                <br>
+                <input type="checkbox" id="sociology" name="sociology" value="sociology">
+                <label for="sociology">Sociology</label>
+                <br>
+                <input type="checkbox" id="arts" name="arts" value="arts">
+                <label for="arts">Arts</label><br>
+            </div>
+
+            <div class="text-area">
+                <p>Write your opinion</p>
+                <textarea name="message" id="message" cols="60" rows="10" ></textarea>
+            </div>
+            
+
+
+            <!-- button -->
+            <button type="submit" id="submit">Submit</button>
+
+        </form>
+    </div>
+    <!-- script code -->
+    <script>
+        let button = document.getElementById("submit").addEventListener('click',(e)=>{
+            console.log("hello");
+            e.preventDefault();
+        })
+    </script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
